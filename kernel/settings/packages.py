@@ -26,6 +26,7 @@ INSTALLED_APPS.append('admin_honeypot')
 # Security
 
 # Applications
+INSTALLED_APPS.append('users')
 
 # ########### #
 #   UPLOAD    #
@@ -38,4 +39,4 @@ INSTALLED_APPS.append('admin_honeypot')
 # #################### #
 # IMPORTANT VARIABLES  #
 # #################### #
-# AUTH_USER_MODEL = 'accounts.CustomUser'
+AUTH_USER_MODEL = 'users.User'
