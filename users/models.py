@@ -5,6 +5,8 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.core.validators import RegexValidator
 
+from rest_framework_simplejwt.tokens import RefreshToken
+
 from users.managers import CustomUserManager
 
 INTERNATIONAL_PHONE_NUMBER_REGEX = r'^\+?1?\d{9,15}$'
@@ -46,6 +48,9 @@ class User(AbstractUser):
     REQUIRED_FIELDS = []
 
     objects = CustomUserManager()
+
+    def generate_jwt(self):
+        return RefreshToken.for_user(self)
 
     def __str__(self):
         return f'{self.get_full_name()}-{self.phone_number}'
