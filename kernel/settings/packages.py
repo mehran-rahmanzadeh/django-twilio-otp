@@ -41,3 +41,5 @@ INSTALLED_APPS.append('otp')
 # IMPORTANT VARIABLES  #
 # #################### #
 AUTH_USER_MODEL = 'users.User'
+
+TWILIO_ACCOUNT_SECURITY_API_KEY = config('TWILIO_ACCOUNT_SECURITY_API_KEY')
