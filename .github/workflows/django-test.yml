@@ -50,7 +50,7 @@ jobs:
 
       - name: Move configuration file
         run: |
-          cp docs/docker/settings.ini .
+          cp docs/github/settings.ini .
 
       - name: Run migrations
         run: python manage.py migrate
