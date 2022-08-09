@@ -27,6 +27,7 @@ INSTALLED_APPS.append('admin_honeypot')
 
 # Applications
 INSTALLED_APPS.append('users')
+INSTALLED_APPS.append('otp')
 
 # ########### #
 #   UPLOAD    #
